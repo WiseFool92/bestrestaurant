@@ -10,4 +10,9 @@
 <h3>@Html.DisplayNameFor(model => model.Address): @Html.DisplayFor(model => model.Address)<h3><br>
 <h3>@Html.DisplayNameFor(model => model.Rating): @Html.DisplayFor(model => model.Rating)<h3><br>
 
-<p>@Html.ActionLink("Back to list", "Index", "Restuarant")</p>
+@* We need to display the cuisine type in the restaurant view *@
+@* <h3>@Html.DisplayNameFor(model => model.Type): @Html.DisplayFor(model => model.Type)<h3><br> *@
+@* This is currently doing nothing *@
+
+<p>@Html.ActionLink("Edit this Restaurant", "Update")</p>
+<p>@Html.ActionLink("Back to list", "Index", "Restaurants")</p>

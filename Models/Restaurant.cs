@@ -9,7 +9,7 @@ namespace TableData.Models
     public string Name { get; set; }
     public string Phone { get; set; }
     public string Address { get; set; }
-    public double Rating { get; set; }
+    public int Rating { get; set; }
     public virtual Cuisine Cuisine { get; set; }
   }
 }
