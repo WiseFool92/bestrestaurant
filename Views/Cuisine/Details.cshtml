@@ -1,0 +1,10 @@
+@{
+  Layout = "_Layout";
+}
+
+@model TableData.Models.Cuisine
+
+<h2>Cuisine Details</h2>
+<h3>@Html.DisplayNameFor(model => model.Type): @Html.DisplayFor(model => model.Type)<h3><br>
+
+<p>@Html.ActionLink("Back to list", "Index", "Cuisine")</p>

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 
-namespace BestRestaurant.Models
+namespace TableData.Models
 {
   public class Cuisine
   {
