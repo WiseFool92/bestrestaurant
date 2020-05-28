@@ -24,6 +24,7 @@ namespace TableData.Controllers
 
     public ActionResult Create()
     {
+      ViewBag.CuisineId = new SelectList(_db.Cuisine, "CuisineId", "Type");
       return View();
     }
 
@@ -49,10 +50,10 @@ namespace TableData.Controllers
     //   return View("Index", matchCuisine);
     // }
 
-
     public ActionResult Update(int id)
     {
-      var thisRestaurant = _db.Restaurants.FirstOrDefault(Restaurant => restaurant.RestaurantId == id);
+      var thisRestaurant = _db.Restaurants.FirstOrDefault(restaurant => restaurant.RestaurantId == id);
+      ViewBag.CuisineId = new SelectList(_db.Cuisine, "CuisineId", "Type");
       return View(thisRestaurant);
     }
 
@@ -69,7 +70,6 @@ namespace TableData.Controllers
       var thisRestaurant = _db.Restaurants.FirstOrDefault(restaurant => restaurant.RestaurantId == id);
       return View(thisRestaurant);
     }
-
 
     [HttpPost, ActionName("Delete")]
     public ActionResult DeleteConfirmed(int id)
